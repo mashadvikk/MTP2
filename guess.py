@@ -50,7 +50,7 @@ def play(low=1, high=100, secret=None, ask=input):
     Попытка 2 из 8: загаданное число больше
     Попытка 3 из 8: загаданное число меньше
     Попытка 4 из 8: загаданное число больше
-    Угадала за 5 попыток!
+    Угадала! Число попыток: 5
     5
     """
     if secret is None:
@@ -65,7 +65,7 @@ def play(low=1, high=100, secret=None, ask=input):
         tries += 1
         answer = hint(secret, int(text))
         if answer == "угадала":
-            print(f"Угадала за {tries} попыток!")
+            print(f"Угадала! Число попыток: {tries}")
             return tries
         print(f"Попытка {tries} из {limit}: загаданное число {answer}")
     print(f"Попытки закончились, было загадано {secret}.")
